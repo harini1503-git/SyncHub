@@ -10,6 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { API } from "@/lib/api";
 import api from "@/lib/axios";
 import { useRouter } from 'next/navigation';
+import { toast } from "sonner";
 
 export default function SignupForm() {
   const router = useRouter();
@@ -24,11 +25,13 @@ export default function SignupForm() {
     try{
       const response = await api.post(API.signup, {username, email, password});
       console.log("Sign-up successful:", response.data);
+      toast.success(response.data.message || "Sign up successfully");
       const { token } = response.data;
       localStorage.setItem("accesstoken", token);
       router.push("/dashboard");
     }catch(error){
       console.error("Error during sign-up:", error);
+      toast.error("Error during sign-up. Please try again.");
     }
   }
 

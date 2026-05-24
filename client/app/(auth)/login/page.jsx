@@ -25,13 +25,13 @@ export default function LoginForm() {
     try{
       const response = await api.post(API.login, {email, password});
       console.log("Login successful:", response.data);
-      toast.success(response.data.message, {className: "bg-green text-white"})
+      toast.success(response.data.message || "Login successful");
       const { token } = response.data;
       localStorage.setItem("accesstoken", token);
       router.push("/dashboard");
     }catch(error){
       console.error("Error during login:", error);
-      toast.error("Invalid email or password", {className: "bg-red-600 text-white"});
+      toast.error("Invalid email or password");
     }
   }
 
