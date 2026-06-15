@@ -66,7 +66,7 @@ export default function SignupForm() {
       {/* RIGHT SIDE */}
       <div className="flex flex-1 items-center justify-center p-6 ">
 
-        <Card className="w-full max-w-md border-white/10 bg-white/5 backdrop-blur-xl p-12 w-800" style={{width: "100%", maxWidth: "500px", height: "550px"}}>
+        <Card className="w-full max-w-md border-white/10 bg-white/5 backdrop-blur-xl p-12 w-800" style={{width: "100%", maxWidth: "500px", height: "auto"}}>
 
           {/* TITLE */}
           <div className="mb-4">
@@ -86,7 +86,7 @@ export default function SignupForm() {
             {/* NAME */}
             <div className="space-y-2">
 
-              <label className="text-sm text-slate-300">
+              <label className="font-medium text-base text-slate-300">
                 Full Name
               </label>
 
@@ -99,7 +99,7 @@ export default function SignupForm() {
 
                 <Input
                   placeholder="Enter your full name"
-                  className="pl-10 bg-[#111827] border-white/10 text-white"
+                  className="pl-10 bg-[#111827] border-white/10 text-white h-10"
                   value={username}
                   onChange={(e) => setusername(e.target.value)}
                 />
@@ -109,7 +109,7 @@ export default function SignupForm() {
             {/* EMAIL */}
             <div className="space-y-2">
 
-              <label className="text-sm text-slate-300">
+              <label className="font-medium text-base text-slate-300">
                 Email Address
               </label>
 
@@ -123,7 +123,7 @@ export default function SignupForm() {
                 <Input
                   type="email"
                   placeholder="Enter your email"
-                  className="pl-10 bg-[#111827] border-white/10 text-white"
+                  className="pl-10 bg-[#111827] border-white/10 text-white h-10"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -133,7 +133,7 @@ export default function SignupForm() {
             {/* PASSWORD */}
             <div className="space-y-2">
 
-              <label className="text-sm text-slate-300">
+              <label className="font-medium text-base text-slate-300">
                 Password
               </label>
 
@@ -151,7 +151,7 @@ export default function SignupForm() {
                       : "password"
                   }
                   placeholder="Create password"
-                  className="pl-10 pr-10 bg-[#111827] border-white/10 text-white"
+                  className="pl-10 pr-10 bg-[#111827] border-white/10 text-white h-10"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
@@ -177,7 +177,7 @@ export default function SignupForm() {
 
               <Checkbox />
 
-              <p>
+              <p className="text-slate-400 text-sm">
                 I agree to the{" "}
                 <span className="text-blue-400">
                   Terms
@@ -190,7 +190,7 @@ export default function SignupForm() {
             </div>
 
             {/* BUTTON */}
-            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white h-10 text-base font-medium font-bold">
               Sign Up
             </Button>
 

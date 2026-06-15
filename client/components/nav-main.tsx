@@ -29,7 +29,7 @@ export function NavMain({
                 tooltip={item.title}
                 asChild
                 isActive={item.isActive}
-                className="h-12 rounded-xl text-base"
+                className="h-12 rounded-xl text-base hover:bg-[#223555] hover:text-white data-[active=true]:bg-[#223555] data-[active=true]:text-white"
               >
                 <a href={item.url}>
                   {item.icon && <item.icon className="size-5" />}

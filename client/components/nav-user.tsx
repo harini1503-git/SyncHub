@@ -32,7 +32,7 @@ export function NavUser({
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
               size="lg"
-              className="h-14 rounded-xl hover:bg-secondary data-[state=open]:bg-secondary"
+              className="h-14 rounded-xl hover:bg-[#223555] data-[state=open]:bg-[#223555] hover:text-white data-[state=open]:text-white"
             >
               <img
                 src="https://github.com/shadcn.png"
@@ -57,14 +57,14 @@ export function NavUser({
           <DropdownMenuContent
             side="right"
             align="end"
-            className="w-56 hover:bg-[#1e293b]"
+            className="w-56 hover:bg-[#223555] bg-[#223555] p-4 rounded-xl text-white"
           >
             <DropdownMenuItem>
               <Settings className="mr-2 size-4" />
               Settings
             </DropdownMenuItem>
 
-            <DropdownMenuSeparator />
+            {/* <DropdownMenuSeparator /> */}
 
             <DropdownMenuItem>
               <LogOut className="mr-2 size-4" />

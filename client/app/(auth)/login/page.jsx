@@ -65,7 +65,7 @@ export default function LoginForm() {
       {/* RIGHT SIDE */}
       <div className="flex flex-1 items-center justify-center p-6 ">
 
-        <Card className="w-full max-w-md border-white/10 bg-white/5 backdrop-blur-xl p-12 w-800" style={{width: "100%", maxWidth: "500px", height: "470px"}}>
+        <Card className="w-full max-w-md border-white/10 bg-white/5 backdrop-blur-xl p-12 w-800" style={{width: "100%", maxWidth: "500px", height: "auto"}}>
 
           {/* TITLE */}
           <div className="mb-3">
@@ -85,7 +85,7 @@ export default function LoginForm() {
             {/* EMAIL */}
             <div className="space-y-2">
 
-              <label className="text-sm text-slate-300">
+              <label className="font-medium text-base text-slate-300">
                 Email Address
               </label>
 
@@ -99,7 +99,7 @@ export default function LoginForm() {
                 <Input
                   type="email"
                   placeholder="Enter your email"
-                  className="pl-10 bg-[#111827] border-white/10 text-white"
+                  className="pl-10 bg-[#111827] border-white/10 text-white h-10"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -109,7 +109,7 @@ export default function LoginForm() {
             {/* PASSWORD */}
             <div className="space-y-5">
 
-              <label className="text-sm text-slate-300">
+              <label className="font-medium text-base text-slate-300">
                 Password
               </label>
 
@@ -123,7 +123,7 @@ export default function LoginForm() {
                 <Input
                   type="password"
                   placeholder="Enter your password"
-                  className="pl-10 bg-[#111827] border-white/10 text-white"
+                  className="pl-10 bg-[#111827] border-white/10 text-white h-10"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
@@ -131,7 +131,7 @@ export default function LoginForm() {
             </div>
 
             {/* TERMS */}
-            <div className="flex items-center gap-3 text-sm text-slate-400">
+            <div className=" xl:flex xl:items-center xl:gap-3 xl:text-sm text-slate-400">
                 <span className="flex gap-3">
                     <Checkbox />
                     <p>Remember me </p>
@@ -144,7 +144,7 @@ export default function LoginForm() {
             </div>
 
             {/* BUTTON */}
-            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white h-10 text-base font-medium font-bold cursor-pointer">
               Login
             </Button>
 
