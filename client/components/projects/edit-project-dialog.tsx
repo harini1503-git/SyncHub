@@ -52,10 +52,10 @@ export function DialogDemo({ open }: { open: boolean}) {
 
         <DialogFooter className="bg-[#223555] border border-[#223555] rounded-b-md mt-4">
           <DialogClose asChild>
-            <Button variant="outline" className="bg-[#1d263f] text-white hover:bg-[#223555] hover:text-white hover:border-b-2 hover:border-[#223555] cursor-pointer">
+            <Button className="bg-[#1d263f] text-white hover:bg-[#223555] hover:text-white hover:border-3 hover:border-solid hover:border-[#1d263f] cursor-pointer">
               Cancel
             </Button>
-          </DialogClose>
+          </DialogClose>    
 
           <Button type="submit">
             Save changes
